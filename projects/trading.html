@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Project 1 - Trading Platform</title>
+</head>
+<body class="bodyP">
+    <header class="header">
+        <nav class="headerNav">
+
+            <a class="headerName" href="../index.html">Back to Portfolio</a>
+            <div id="themeToggleContainer" class="theme-toggle-container">
+                <div id="themeToggle" class="theme-toggle">
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <div class="mainContainer">
+        <div class="projectDetail">
+            <h1>Trading Platform</h1>
+            <p>This project involved developing a stock and cryptocurrency trading platform that includes indicators and a trading robot. It was developed using C++ with OpenGL.</p>
+
+            <div class="blogContent">
+                <div class="blogSection">
+                    <h2>Introduction</h2>
+                    <p>The goal of this project was to create a comprehensive trading platform that could handle real-time data and execute trades automatically using pre-defined strategies. The platform integrates various technical indicators to assist in trading decisions.</p>
+                </div>
+
+                <div class="blogSection">
+                    <img src="../images/Trading/trading.png" alt="Trading Platform Interface">
+                    <p>Screenshot of the trading platform's user interface, displaying the integrated technical indicators and live market data.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Technical Details</h2>
+                    <p>The platform was built using C++ for its performance benefits, particularly when handling large volumes of data. OpenGL was used for rendering the charts and graphical elements, ensuring smooth and responsive updates.</p>
+                </div>
+
+                <div class="blogSection">
+                    <img src="../images/Trading/charts.png" alt="Charting Features">
+                    <p>The charting feature of the platform allows users to apply various indicators such as moving averages, Bollinger Bands, and MACD to analyze market trends.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Challenges and Solutions</h2>
+                    <img src="../images/Trading/pythongraph.png" alt="Charting Features">
+
+                    <p>One of the major challenges was ensuring the accuracy and speed of the trading robot aswell as the chart performance. By optimizing the algorithms and using efficient data structures, the platform was able to execute trades quickly and accurately. The software was first build in Python but because of poor chart performance it was later migrated into C++/OpenGL. The picture over is showing the python software.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Conclusion</h2>
+                    <p>The trading platform was a successful project that combined advanced programming techniques with financial market knowledge. The result is a tool that can assist traders in making informed decisions and automating their trading strategies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const themeToggleContainer = document.getElementById('themeToggleContainer');
+    const toggleBall = document.querySelector('.toggle-ball');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.classList.toggle('light-theme', savedTheme === 'light');
+    toggleBall.style.left = savedTheme === 'light' ? '28px' : '3px';
+
+    themeToggleContainer.addEventListener('click', () => {
+        const isLightTheme = body.classList.toggle('light-theme');
+        localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+        toggleBall.style.left = isLightTheme ? '28px' : '3px';
+    });
+</script>
+</html>

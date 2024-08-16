@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Project 2 - Antivirus</title>
+</head>
+<body class="bodyP">
+    <header class="header">
+        <nav class="headerNav">
+
+            <a class="headerName" href="../index.html">Back to Portfolio</a>
+            <div id="themeToggleContainer" class="theme-toggle-container">
+                <div id="themeToggle" class="theme-toggle">
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <div class="mainContainer">
+        <div class="projectDetail">
+            <h1>Antivirus - Malware Detection with SHA-256</h1>
+            <p>This project involved developing an antivirus application that detects malware using SHA-256 hashing. The project was developed in C#.</p>
+
+            <div class="blogContent">
+                <div class="blogSection">
+                    <h2>Introduction</h2>
+                    <p>The aim of this project was to create an efficient antivirus application that could scan files for malware by comparing their SHA-256 hash values against known malicious hashes. This approach ensures that even slight changes in file content are detected as potential threats.</p>
+                </div>
+
+                <div class="blogSection">
+                    <img src="../images/antivirus1.png" alt="Antivirus Interface">
+                    <p>Screenshot of the antivirus application interface, where users can initiate a scan and view results.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Technical Implementation</h2>
+                    <p>The antivirus software was developed in C#, utilizing the SHA-256 cryptographic hash function to generate unique identifiers for files. The application compares these hashes with a database of known malware signatures to identify threats.</p>
+                </div>
+
+                <div class="blogSection">
+                    <img src="../images/antivirus2.png" alt="SHA-256 Process">
+                    <p>Diagram illustrating the SHA-256 hashing process, which converts file data into a fixed-size string of characters, unique to the file content.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Challenges and Solutions</h2>
+                    <p>One of the main challenges was ensuring the application could process large files quickly while maintaining accuracy. By optimizing the hashing and comparison algorithms, the application can efficiently scan files without compromising performance.</p>
+                </div>
+
+                <div class="blogSection">
+                    <img src="../images/antivirus3.png" alt="Scanning Performance">
+                    <p>Performance metrics of the antivirus software, showing scan times for various file sizes and types.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Conclusion</h2>
+                    <p>This antivirus project demonstrated the effectiveness of SHA-256 in malware detection. The use of C# provided the necessary tools to develop a responsive and reliable application, capable of protecting systems from known threats.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const themeToggleContainer = document.getElementById('themeToggleContainer');
+    const toggleBall = document.querySelector('.toggle-ball');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.classList.toggle('light-theme', savedTheme === 'light');
+    toggleBall.style.left = savedTheme === 'light' ? '28px' : '3px';
+
+    themeToggleContainer.addEventListener('click', () => {
+        const isLightTheme = body.classList.toggle('light-theme');
+        localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+        toggleBall.style.left = isLightTheme ? '28px' : '3px';
+    });
+</script>
+</html>

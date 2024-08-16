@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Project 3 - Forcefeedback Wheel</title>
+</head>
+<body class="bodyP">
+    <header class="header">
+        <nav class="headerNav">
+
+            <a class="headerName" href="../index.html">Back to Portfolio</a>
+            <div id="themeToggleContainer" class="theme-toggle-container">
+                <div id="themeToggle" class="theme-toggle">
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </div>
+
+    <div class="mainContainer">
+        <div class="projectDetail">
+            <h1>Forcefeedback Wheel - Arduino C++ Development</h1>
+            <p>This project involved creating a force feedback wheel for car games, developed using Arduino and C++. The goal was to enhance the gaming experience by providing realistic force feedback to the player.</p>
+
+            <div class="blogContent">
+                <div class="blogSection">
+                    <h2>Introduction</h2>
+                    <p>The Forcefeedback Wheel project was designed to give me a more immersive driving experience by simulating the physical forces encountered during driving. The project utilized Arduino microcontrollers (Arduino Leonardo) and C++ to control a motor connected to a steering wheel with a chain that generate the feedback forces.</p>
+                </div>
+
+                <div class="blogSection">
+                    <div class="mediaContainer">
+                        <img src="../images/ratt/components.jpg" alt="Arduino Circuitry" class="mediaImage">
+                        <video controls class="mediaVideo">
+                            <source src="../images/ratt/80.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <p>Image of the prototype of the force feedback wheel, showing the basic structure and components. Video showcasing the feedback from the game.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Technical Implementation</h2>
+                    <p>The project was built around an Arduino Leonardo microcontroller, which interfaces with the game software to receive force feedback data. This data is then processed to control motors attached to the steering wheel, creating realistic resistance and feedback.</p>
+                </div>
+
+                <div class="blogSection">
+                    <img src="../images/" alt="Arduino Circuitry">
+                    <p>Diagram of the Arduino circuitry used in the project, highlighting the connections between the microcontroller, motors, and sensors.</p>
+                </div>
+
+                <div class="blogSection">
+                    <h2>Challenges and Solutions</h2>
+                    <p>One of the main challenges was ensuring smooth and responsive feedback while avoiding latency. This was achieved by optimizing the code in C++ and carefully tuning the motor control algorithms to react quickly to game events.</p>
+                </div>
+
+
+                <div class="blogSection">
+                    <h2>Conclusion</h2>
+                    <p>The Forcefeedback Wheel project successfully delivered a highly immersive gaming experience by integrating Arduino and C++ to create responsive and realistic force feedback. This project showcases the potential of DIY electronics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeToggleContainer = document.getElementById('themeToggleContainer');
+        const toggleBall = document.querySelector('.toggle-ball');
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        body.classList.toggle('light-theme', savedTheme === 'light');
+        toggleBall.style.left = savedTheme === 'light' ? '28px' : '3px';
+
+        themeToggleContainer.addEventListener('click', () => {
+            const isLightTheme = body.classList.toggle('light-theme');
+            localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+            toggleBall.style.left = isLightTheme ? '28px' : '3px';
+        });
+    </script>
+</body>
+</html>

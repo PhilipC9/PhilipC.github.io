@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Project 1 - Trading Platform</title>
+</head>
+<body class="bodyP">
+    <header class="header">
+        <nav class="headerNav">
+
+            <a class="headerName" href="../index.html">Back to Portfolio</a>
+            <div id="themeToggleContainer" class="theme-toggle-container">
+                <div id="themeToggle" class="theme-toggle">
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <div class="mainContainer">
+        <div class="projectDetail">
+            <h1></h1>
+            <p></p>
+
+            <div class="blogContent">
+                <div class="blogSection">
+                    <h2>404</h2>
+                    <p>Oops! It looks like the page you’re looking for doesn’t exist. It is currently under construction!</p>
+                </div>
+        </div>
+    </div>
+</body>
+<script>
+    const themeToggleContainer = document.getElementById('themeToggleContainer');
+    const toggleBall = document.querySelector('.toggle-ball');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.classList.toggle('light-theme', savedTheme === 'light');
+    toggleBall.style.left = savedTheme === 'light' ? '28px' : '3px';
+
+    themeToggleContainer.addEventListener('click', () => {
+        const isLightTheme = body.classList.toggle('light-theme');
+        localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+        toggleBall.style.left = isLightTheme ? '28px' : '3px';
+    });
+</script>
+</html>

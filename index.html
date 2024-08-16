@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header-nav">
+
+            <a class="header-name" href="#">Portfolio</a>
+            <div id="themeToggleContainer" class="theme-toggle-container">
+                <div id="themeToggle" class="theme-toggle">
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="sidebar">
+            <div class="profile-section">
+                <div class="image-wrapper">
+                    <img src="https://drive.google.com/thumbnail?id=1hgIFmCR1mIeUi5zpDKOm1kMBJ1-9-RRD&sz=w1000" alt="Profile Picture">
+                </div>
+                <h2>Philip</h2>
+            </div>
+            <div class="about-me-section">
+                <h1>About Me</h1>
+                <p>Hello! I programmed this website to show my best projects.</p>
+            </div>
+            <div class="skills-section">
+                <h1>Skills</h1>
+                <ul>
+                    <li>C#</li>
+                    <li>C/C++</li>
+                    <li>Python</li>
+                    <li>HTML/CSS/JS</li>
+                </ul>
+            </div>
+        </section>
+        <section class="content">
+            <h1>Projects</h1>
+            <div class="filter-controls">
+                <input type="text" id="projectSearch" placeholder="Search projects...">
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+            <div class="pagination" id="pagination"></div>
+        </section>
+    </main>
+</body>
+</html>
